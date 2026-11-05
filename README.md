@@ -78,3 +78,18 @@ by rule number and tag.
 
 Demo book: [Deutsche Märchen gesammelt durch die Brüder Grimm](https://www.gutenberg.org/ebooks/77905),
 Project Gutenberg, public domain; saved as `.cache/books/grimm.epub`.
+
+## Licence
+
+The code is MIT (see `LICENSE`). The engine core in `engine/core/` is also
+MIT, from [github.com/cadenegr/skyscrapers](https://github.com/cadenegr/skyscrapers).
+
+The data keeps the licence of its source:
+
+- `src/data/nouns.json`, `src/data/verbs.json`, `scripts/pipeline/sein-verbs.txt`:
+  from Wiktionary via kaikki.org (CC BY-SA 4.0), with OdeNet (CC BY-SA 4.0),
+  the Open English WordNet (CC BY 4.0) and the Leipzig Corpora Collection
+  (CC BY 4.0), see "Word list" above
+- `src/data/baseline.json`: sentences from [Tatoeba](https://tatoeba.org)
+  (CC BY 2.0 FR); each keeps its sentence number (`src`), so it can be
+  credited at https://tatoeba.org/sentences/show/<src>
