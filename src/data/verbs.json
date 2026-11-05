@@ -1,0 +1,740 @@
+{
+ "sehen": {
+  "1s": [
+   "sehe"
+  ],
+  "2s": [
+   "siehst"
+  ],
+  "3s": [
+   "sieht"
+  ],
+  "1p": [
+   "sehen"
+  ],
+  "2p": [
+   "seht"
+  ],
+  "3p": [
+   "sehen"
+  ]
+ },
+ "geben": {
+  "1s": [
+   "gebe"
+  ],
+  "2s": [
+   "gibst"
+  ],
+  "3s": [
+   "gibt"
+  ],
+  "1p": [
+   "geben"
+  ],
+  "2p": [
+   "gebt"
+  ],
+  "3p": [
+   "geben"
+  ]
+ },
+ "glauben": {
+  "1s": [
+   "glaube"
+  ],
+  "2s": [
+   "glaubst"
+  ],
+  "3s": [
+   "glaubt"
+  ],
+  "1p": [
+   "glauben"
+  ],
+  "2p": [
+   "glaubt"
+  ],
+  "3p": [
+   "glauben"
+  ]
+ },
+ "sein": {
+  "1s": [
+   "bin"
+  ],
+  "2s": [
+   "bist"
+  ],
+  "3s": [
+   "ist"
+  ],
+  "1p": [
+   "sind"
+  ],
+  "2p": [
+   "seid"
+  ],
+  "3p": [
+   "sind"
+  ]
+ },
+ "arbeiten": {
+  "1s": [
+   "arbeite"
+  ],
+  "2s": [
+   "arbeitest"
+  ],
+  "3s": [
+   "arbeitet"
+  ],
+  "1p": [
+   "arbeiten"
+  ],
+  "2p": [
+   "arbeitet"
+  ],
+  "3p": [
+   "arbeiten"
+  ]
+ },
+ "nehmen": {
+  "1s": [
+   "nehme"
+  ],
+  "2s": [
+   "nimmst"
+  ],
+  "3s": [
+   "nimmt"
+  ],
+  "1p": [
+   "nehmen"
+  ],
+  "2p": [
+   "nehmt"
+  ],
+  "3p": [
+   "nehmen"
+  ]
+ },
+ "gehen": {
+  "1s": [
+   "gehe"
+  ],
+  "2s": [
+   "gehst"
+  ],
+  "3s": [
+   "geht"
+  ],
+  "1p": [
+   "gehen"
+  ],
+  "2p": [
+   "geht"
+  ],
+  "3p": [
+   "gehen"
+  ]
+ },
+ "zeigen": {
+  "1s": [
+   "zeige"
+  ],
+  "2s": [
+   "zeigst"
+  ],
+  "3s": [
+   "zeigt"
+  ],
+  "1p": [
+   "zeigen"
+  ],
+  "2p": [
+   "zeigt"
+  ],
+  "3p": [
+   "zeigen"
+  ]
+ },
+ "spielen": {
+  "1s": [
+   "spiele"
+  ],
+  "2s": [
+   "spielst"
+  ],
+  "3s": [
+   "spielt"
+  ],
+  "1p": [
+   "spielen"
+  ],
+  "2p": [
+   "spielt"
+  ],
+  "3p": [
+   "spielen"
+  ]
+ },
+ "helfen": {
+  "1s": [
+   "helfe"
+  ],
+  "2s": [
+   "hilfst"
+  ],
+  "3s": [
+   "hilft"
+  ],
+  "1p": [
+   "helfen"
+  ],
+  "2p": [
+   "helft"
+  ],
+  "3p": [
+   "helfen"
+  ]
+ },
+ "verstehen": {
+  "1s": [
+   "verstehe"
+  ],
+  "2s": [
+   "verstehst"
+  ],
+  "3s": [
+   "versteht"
+  ],
+  "1p": [
+   "verstehen"
+  ],
+  "2p": [
+   "versteht"
+  ],
+  "3p": [
+   "verstehen"
+  ]
+ },
+ "sprechen": {
+  "1s": [
+   "spreche"
+  ],
+  "2s": [
+   "sprichst"
+  ],
+  "3s": [
+   "spricht"
+  ],
+  "1p": [
+   "sprechen"
+  ],
+  "2p": [
+   "sprecht"
+  ],
+  "3p": [
+   "sprechen"
+  ]
+ },
+ "kommen": {
+  "1s": [
+   "komme"
+  ],
+  "2s": [
+   "kommst"
+  ],
+  "3s": [
+   "kommt"
+  ],
+  "1p": [
+   "kommen"
+  ],
+  "2p": [
+   "kommt"
+  ],
+  "3p": [
+   "kommen"
+  ]
+ },
+ "haben": {
+  "1s": [
+   "habe"
+  ],
+  "2s": [
+   "hast"
+  ],
+  "3s": [
+   "hat"
+  ],
+  "1p": [
+   "haben"
+  ],
+  "2p": [
+   "habt"
+  ],
+  "3p": [
+   "haben"
+  ]
+ },
+ "schreiben": {
+  "1s": [
+   "schreibe"
+  ],
+  "2s": [
+   "schreibst"
+  ],
+  "3s": [
+   "schreibt"
+  ],
+  "1p": [
+   "schreiben"
+  ],
+  "2p": [
+   "schreibt"
+  ],
+  "3p": [
+   "schreiben"
+  ]
+ },
+ "finden": {
+  "1s": [
+   "finde"
+  ],
+  "2s": [
+   "findest"
+  ],
+  "3s": [
+   "findet"
+  ],
+  "1p": [
+   "finden"
+  ],
+  "2p": [
+   "findet"
+  ],
+  "3p": [
+   "finden"
+  ]
+ },
+ "fragen": {
+  "1s": [
+   "frage"
+  ],
+  "2s": [
+   "fragst"
+  ],
+  "3s": [
+   "fragt"
+  ],
+  "1p": [
+   "fragen"
+  ],
+  "2p": [
+   "fragt"
+  ],
+  "3p": [
+   "fragen"
+  ]
+ },
+ "antworten": {
+  "1s": [
+   "antworte"
+  ],
+  "2s": [
+   "antwortest"
+  ],
+  "3s": [
+   "antwortet"
+  ],
+  "1p": [
+   "antworten"
+  ],
+  "2p": [
+   "antwortet"
+  ],
+  "3p": [
+   "antworten"
+  ]
+ },
+ "gratulieren": {
+  "1s": [
+   "gratuliere"
+  ],
+  "2s": [
+   "gratulierst"
+  ],
+  "3s": [
+   "gratuliert"
+  ],
+  "1p": [
+   "gratulieren"
+  ],
+  "2p": [
+   "gratuliert"
+  ],
+  "3p": [
+   "gratulieren"
+  ]
+ },
+ "bestellen": {
+  "1s": [
+   "bestelle"
+  ],
+  "2s": [
+   "bestellst"
+  ],
+  "3s": [
+   "bestellt"
+  ],
+  "1p": [
+   "bestellen"
+  ],
+  "2p": [
+   "bestellt"
+  ],
+  "3p": [
+   "bestellen"
+  ]
+ },
+ "füttern": {
+  "1s": [
+   "füttre"
+  ],
+  "2s": [
+   "fütterst"
+  ],
+  "3s": [
+   "füttert"
+  ],
+  "1p": [
+   "füttern"
+  ],
+  "2p": [
+   "füttert"
+  ],
+  "3p": [
+   "füttern"
+  ]
+ },
+ "wohnen": {
+  "1s": [
+   "wohne"
+  ],
+  "2s": [
+   "wohnst"
+  ],
+  "3s": [
+   "wohnt"
+  ],
+  "1p": [
+   "wohnen"
+  ],
+  "2p": [
+   "wohnt"
+  ],
+  "3p": [
+   "wohnen"
+  ]
+ },
+ "kennen": {
+  "1s": [
+   "kenne"
+  ],
+  "2s": [
+   "kennst"
+  ],
+  "3s": [
+   "kennt"
+  ],
+  "1p": [
+   "kennen"
+  ],
+  "2p": [
+   "kennt"
+  ],
+  "3p": [
+   "kennen"
+  ]
+ },
+ "suchen": {
+  "1s": [
+   "suche"
+  ],
+  "2s": [
+   "suchst"
+  ],
+  "3s": [
+   "sucht"
+  ],
+  "1p": [
+   "suchen"
+  ],
+  "2p": [
+   "sucht"
+  ],
+  "3p": [
+   "suchen"
+  ]
+ },
+ "kaufen": {
+  "1s": [
+   "kaufe"
+  ],
+  "2s": [
+   "kaufst"
+  ],
+  "3s": [
+   "kauft"
+  ],
+  "1p": [
+   "kaufen"
+  ],
+  "2p": [
+   "kauft"
+  ],
+  "3p": [
+   "kaufen"
+  ]
+ },
+ "danken": {
+  "1s": [
+   "danke"
+  ],
+  "2s": [
+   "dankst"
+  ],
+  "3s": [
+   "dankt"
+  ],
+  "1p": [
+   "danken"
+  ],
+  "2p": [
+   "dankt"
+  ],
+  "3p": [
+   "danken"
+  ]
+ },
+ "treffen": {
+  "1s": [
+   "treffe"
+  ],
+  "2s": [
+   "triffst"
+  ],
+  "3s": [
+   "trifft"
+  ],
+  "1p": [
+   "treffen"
+  ],
+  "2p": [
+   "trefft"
+  ],
+  "3p": [
+   "treffen"
+  ]
+ },
+ "brauchen": {
+  "1s": [
+   "brauche"
+  ],
+  "2s": [
+   "brauchst"
+  ],
+  "3s": [
+   "braucht"
+  ],
+  "1p": [
+   "brauchen"
+  ],
+  "2p": [
+   "braucht"
+  ],
+  "3p": [
+   "brauchen"
+  ]
+ },
+ "bezahlen": {
+  "1s": [
+   "bezahle"
+  ],
+  "2s": [
+   "bezahlst"
+  ],
+  "3s": [
+   "bezahlt"
+  ],
+  "1p": [
+   "bezahlen"
+  ],
+  "2p": [
+   "bezahlt"
+  ],
+  "3p": [
+   "bezahlen"
+  ]
+ },
+ "besuchen": {
+  "1s": [
+   "besuche"
+  ],
+  "2s": [
+   "besuchst"
+  ],
+  "3s": [
+   "besucht"
+  ],
+  "1p": [
+   "besuchen"
+  ],
+  "2p": [
+   "besucht"
+  ],
+  "3p": [
+   "besuchen"
+  ]
+ },
+ "anrufen": {
+  "1s": [
+   "rufe",
+   "an"
+  ],
+  "2s": [
+   "rufst",
+   "an"
+  ],
+  "3s": [
+   "ruft",
+   "an"
+  ],
+  "1p": [
+   "rufen",
+   "an"
+  ],
+  "2p": [
+   "ruft",
+   "an"
+  ],
+  "3p": [
+   "rufen",
+   "an"
+  ]
+ },
+ "zuhören": {
+  "1s": [
+   "höre",
+   "zu"
+  ],
+  "2s": [
+   "hörst",
+   "zu"
+  ],
+  "3s": [
+   "hört",
+   "zu"
+  ],
+  "1p": [
+   "hören",
+   "zu"
+  ],
+  "2p": [
+   "hört",
+   "zu"
+  ],
+  "3p": [
+   "hören",
+   "zu"
+  ]
+ },
+ "verkaufen": {
+  "1s": [
+   "verkaufe"
+  ],
+  "2s": [
+   "verkaufst"
+  ],
+  "3s": [
+   "verkauft"
+  ],
+  "1p": [
+   "verkaufen"
+  ],
+  "2p": [
+   "verkauft"
+  ],
+  "3p": [
+   "verkaufen"
+  ]
+ },
+ "probieren": {
+  "1s": [
+   "probiere"
+  ],
+  "2s": [
+   "probierst"
+  ],
+  "3s": [
+   "probiert"
+  ],
+  "1p": [
+   "probieren"
+  ],
+  "2p": [
+   "probiert"
+  ],
+  "3p": [
+   "probieren"
+  ]
+ },
+ "einladen": {
+  "1s": [
+   "lade",
+   "ein"
+  ],
+  "2s": [
+   "lädst",
+   "ein"
+  ],
+  "3s": [
+   "lädt",
+   "ein"
+  ],
+  "1p": [
+   "laden",
+   "ein"
+  ],
+  "2p": [
+   "ladet",
+   "ein"
+  ],
+  "3p": [
+   "laden",
+   "ein"
+  ]
+ },
+ "vertrauen": {
+  "1s": [
+   "vertraue"
+  ],
+  "2s": [
+   "vertraust"
+  ],
+  "3s": [
+   "vertraut"
+  ],
+  "1p": [
+   "vertrauen"
+  ],
+  "2p": [
+   "vertraut"
+  ],
+  "3p": [
+   "vertrauen"
+  ]
+ }
+}

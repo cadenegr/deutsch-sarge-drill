@@ -1,0 +1,374 @@
+:root {
+  --bg: #1f2318;
+  --panel: #2b3022;
+  --text: #ecebe0;
+  --muted: #a9ab95;
+  --accent: #d9b44a;
+  --right: #7fbf6a;
+  --wrong: #e0735a;
+  --masculine: #6fa8ff;
+  --feminine: #ff8fc8;
+  --neuter: #6fdc8c;
+  --plural: #c39bff;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+#app {
+  max-width: 34rem;
+  margin: 0 auto;
+  padding: 0 1rem 2rem;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.link {
+  background: none;
+  border: none;
+  padding: 0.25rem 0;
+  color: var(--muted);
+}
+
+.top .link {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.lang {
+  background: var(--panel);
+  border: 1px solid var(--muted);
+  border-radius: 0.4rem;
+  padding: 0.2rem 0.6rem;
+}
+
+.subtitle,
+.stats {
+  color: var(--muted);
+}
+
+.drill-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 100%;
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid var(--accent);
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.drill-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.drill-description {
+  color: var(--muted);
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 1rem;
+  color: var(--muted);
+}
+
+.setting-options {
+  display: flex;
+  border: 1px solid var(--muted);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.setting-options button {
+  background: none;
+  border: none;
+  padding: 0.4rem 0.75rem;
+  color: var(--muted);
+}
+
+.setting-options button.on {
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.drill-bar {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.exercise,
+.feedback {
+  background: var(--panel);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin-top: 1rem;
+}
+
+.case-tag {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.sentence {
+  font-size: 1.4rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.blank {
+  width: 6.5rem;
+  font: inherit;
+  color: var(--accent);
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--accent);
+  text-align: center;
+  outline: none;
+}
+
+.blank:disabled {
+  opacity: 1;
+}
+
+.primary {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.5rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+}
+
+.feedback.right {
+  border-left: 4px solid var(--right);
+}
+
+.feedback.wrong {
+  border-left: 4px solid var(--wrong);
+}
+
+.verdict {
+  margin-top: 0;
+  font-weight: 700;
+}
+
+.right .verdict {
+  color: var(--right);
+}
+
+.wrong .verdict {
+  color: var(--wrong);
+}
+
+.solution strong {
+  color: var(--accent);
+}
+
+.explanation {
+  padding-left: 1.25rem;
+}
+
+.again {
+  color: var(--muted);
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: center;
+}
+
+/* Gender colors, only while the switch is on: der blue, die pink, das
+   green, plural purple. */
+.colors .g-m {
+  color: var(--masculine);
+}
+
+.colors .g-f {
+  color: var(--feminine);
+}
+
+.colors .g-n {
+  color: var(--neuter);
+}
+
+.colors .g-p {
+  color: var(--plural);
+}
+
+.color-key {
+  margin: 0.5rem 0 0;
+  text-align: right;
+  font-weight: 700;
+}
+
+.drill-card + .drill-card {
+  margin-top: 0.75rem;
+}
+
+.menu h1 {
+  font-size: 1.4rem;
+  margin: 0.5rem 0 0;
+}
+
+.menu h2 {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 0;
+}
+
+.hint {
+  color: var(--muted);
+  margin: 0.25rem 0 0.75rem;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr));
+  gap: 0.5rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: var(--panel);
+  border: 1px solid var(--muted);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  font-weight: 700;
+}
+
+.category .count {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 0.85rem;
+}
+
+.drill-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.run-title {
+  margin-left: 0.5rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.last-right {
+  margin: 0.75rem 0 0;
+  color: var(--right);
+}
+
+.blank.word {
+  width: 11rem;
+}
+
+.letters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.letters button {
+  min-width: 2.75rem;
+  padding: 0.4rem 0;
+  background: var(--bg);
+  border: 1px solid var(--muted);
+  border-radius: 0.4rem;
+  font-size: 1.1rem;
+}
+
+.rows {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.5rem 0 1rem;
+  font-size: 1.15rem;
+}
+
+.rows th {
+  text-align: left;
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--muted);
+  padding-right: 0.5rem;
+  white-space: nowrap;
+}
+
+.rows td {
+  padding: 0.35rem 0;
+}
+
+.rows .row-heading th {
+  padding-top: 0.75rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.rows .blank {
+  width: 4.5rem;
+}
+
+.rows-solved {
+  list-style: none;
+  padding-left: 0;
+}
+
+.rows-solved li {
+  margin-bottom: 0.5rem;
+}
+
+.row-wrong {
+  color: var(--wrong);
+}
+
+.row-wrong .why {
+  color: var(--text);
+  font-size: 0.9rem;
+}
+
+/* The word that decides the case, while the clue switch is on. */
+.clues .trigger {
+  text-decoration: underline;
+  text-decoration-color: var(--accent);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.25em;
+}
+
+.step {
+  margin: 0.25rem 0 0;
+  color: var(--accent);
+  font-size: 0.85rem;
+}

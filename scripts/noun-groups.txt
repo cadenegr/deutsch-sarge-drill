@@ -1,0 +1,60 @@
+# Corrections to the noun groups: "Word group" per line, group one of
+# person, animal, food, thing, place, or "-" for no group.
+
+# Not concrete, so no sentence group fits them
+Mitte -
+Trend -
+Heimat -
+Unterbringung -
+Abendkasse -
+Route -
+Zone -
+Börse -
+Netz -
+Infrastruktur -
+Kabinett -
+Plattform -
+Ausweg -
+Schnittstelle -
+Fluggesellschaft -
+Platten -
+Provider -
+Erreger -
+
+# Names, or a word that is mostly something else
+Wagner -
+Köhler -
+Monster -
+Schnabel -
+Wappen -
+Indianer -
+Geschwister -
+
+# Parts of a building, or streets: neither a thing you use nor a place you
+# come from
+Tür -
+Wand -
+Mauer -
+Zaun -
+Hauptstraße -
+Gehweg -
+Fahrbahn -
+Autobahn -
+
+# Places, not things
+Halle place
+Garten place
+Studio place
+Labor place
+Treppenhaus place
+
+# Wrong group from the dictionaries, or a word that fits no sentence
+Schlange animal
+Tresor thing
+Medium -
+Page -
+Quelle -
+Altar -
+Denkmal -
+Zelle -
+Fernsehsender -

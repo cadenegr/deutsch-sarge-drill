@@ -1,0 +1,9 @@
+{
+  "name": "Deutsch Sarge Drill",
+  "short_name": "Sarge Drill",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1f2318",
+  "theme_color": "#1f2318",
+  "icons": [{ "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml" }]
+}

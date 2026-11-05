@@ -1,0 +1,10 @@
+# One word per line: real nouns that are not worth drilling.
+Nein
+Plus
+Minus
+Star
+Beck
+Letztere
+Letzterer
+Vorsitzender
+Vorsitzende
