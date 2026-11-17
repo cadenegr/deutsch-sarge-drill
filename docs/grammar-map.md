@@ -5,7 +5,7 @@ each rule becomes one or more drills, and the status shows how far we are.
 
 - **Level**: where the rule is usually taught (A1 = first months, B2 = upper
   intermediate). Many rules start at one level and get finished at the next.
-- **★** = a rule from Carlos's known weak spots (word order, articles,
+- **★** = a core rule: one of the most common weak spots of adult learners (word order, articles,
   Akkusativ/Dativ, prepositions, Präteritum). These go first.
 - **Status**: ✅ drill exists · ◐ partly covered · blank = not started
 

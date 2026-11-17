@@ -30,7 +30,7 @@ export interface Rule {
   id: string; // "3.2"
   title: string;
   level: string; // "A2", "A2–B1"
-  star: boolean; // one of Carlos's weak spots
+  star: boolean; // a core rule: a common weak spot of adult learners
 }
 
 export const RULES: Rule[] = data.rules;
