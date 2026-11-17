@@ -13,3 +13,6 @@ temp
 .venv/
 engine/obj/
 engine/sentence-engine
+
+# Notes for the AI assistant (kept local)
+CLAUDE.md
