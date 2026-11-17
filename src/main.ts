@@ -71,7 +71,7 @@ const PAGES = {
 } satisfies Record<string, Page>;
 type PageId = keyof typeof PAGES;
 
-type Start = { kind: "articles" } | { kind: "page"; page: PageId; category: Category };
+type Start = { kind: "articles" } | { kind: "realDativ" } | { kind: "page"; page: PageId; category: Category };
 
 // A missed item comes back later, so a drill only ends once every item has
 // been answered right. A right answer moves straight on; only a wrong one
@@ -91,10 +91,23 @@ interface Drill {
 type Screen =
   | { name: "home" }
   | { name: "menu"; page: PageId }
+  | { name: "rules" }
+  | { name: "rule"; id: string }
   | { name: "drill"; drill: Drill }
   | { name: "done"; start: Start; correct: number; total: number };
 
 let screen: Screen = { name: "home" };
+
+// The baseline sentences (1.7 MB) load only when a page needs them.
+let baselinePages: typeof import("./baseline-pages") | null = null;
+
+async function withBaseline(then: () => void): Promise<void> {
+  if (!baselinePages) {
+    app.querySelector("main")?.insertAdjacentHTML("beforeend", `<p class="stats">${t("rules.loading")}</p>`);
+    baselinePages = await import("./baseline-pages");
+  }
+  then();
+}
 
 function escapeHtml(text: string): string {
   return text.replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
@@ -104,7 +117,9 @@ function startDrill(start: Start): void {
   const queue: Item[] =
     start.kind === "articles"
       ? articles.makeDrill(loadOrder(), SESSION_LENGTH)
-      : makeRun<Item>(start.category, PAGES[start.page].make);
+      : start.kind === "realDativ"
+        ? baselinePages!.makeRealDativDrill(loadOrder(), SESSION_LENGTH)
+        : makeRun<Item>(start.category, PAGES[start.page].make);
   screen = {
     name: "drill",
     drill: { start, queue, total: queue.length, index: 0, firstTryRight: 0, missed: new Set(), given: null, lastRight: null },
@@ -149,6 +164,8 @@ function homeScreen(): string {
       <p class="subtitle">${t("home.subtitle")}</p>
       ${(Object.keys(PAGES) as PageId[]).map((id) => card("menu", PAGES[id].title, PAGES[id].description, id)).join("")}
       ${card("articles", "drill.articles.title", "drill.articles.description")}
+      ${card("realDativ", "drill.real.title", "drill.real.description")}
+      ${card("rules", "rules.title", "rules.description")}
       ${toggle("order.label", "order", loadOrder(), [
         ["blocks", t("order.blocks")],
         ["mixed", t("order.mixed")],
@@ -226,7 +243,7 @@ function menuScreen(id: PageId): string {
 
 // The noun in its gender color, when colors are on (CSS does the rest).
 function coloredNoun(exercise: Exercise): string {
-  return `<span class="g-${exercise.noun.gender}">${exercise.shown ?? exercise.noun.word}</span>`;
+  return `<span class="g-${exercise.nounColor ?? exercise.noun.gender}">${exercise.shown ?? exercise.noun.word}</span>`;
 }
 
 function solved(exercise: Exercise): string {
@@ -276,7 +293,10 @@ function input(index: number, given: string[] | null, wide: boolean, placeholder
 function singleExercise(exercise: Exercise, current: Drill, wordAnswer: boolean): { form: string; feedback: string } {
   const answered = current.given !== null;
   const blank = input(0, current.given, wordAnswer, t(wordAnswer ? "drill.placeholderWord" : "drill.placeholder"));
-  const form = `<p class="sentence">${sentence(exercise, blank, coloredNoun(exercise))}</p>`;
+  const credit = exercise.tatoeba
+    ? `<p class="source"><a href="https://tatoeba.org/sentences/show/${exercise.tatoeba}" target="_blank" rel="noopener">Tatoeba #${exercise.tatoeba}</a></p>`
+    : "";
+  const form = `<p class="sentence">${sentence(exercise, blank, coloredNoun(exercise))}</p>${credit}`;
   const feedback = answered
     ? `
       <p class="verdict">${t("drill.wrong", { given: escapeHtml(current.given![0]) })}</p>
@@ -349,7 +369,7 @@ function drillScreen(current: Drill): string {
       </div>
       <p class="last-right">${current.lastRight && !answered ? `✓ ${solvedShort(current.lastRight)}` : "&nbsp;"}</p>
       <form class="exercise" data-action="check">
-        <p class="case-tag">${tag} = ${meaning}</p>
+        <p class="case-tag">${tag}${meaning ? ` = ${meaning}` : ""}</p>
         ${form}
         ${letters}
         ${answered ? "" : `<button class="primary" type="submit">${t("drill.check")}</button>`}
@@ -368,6 +388,24 @@ function drillScreen(current: Drill): string {
 
 function articleFor(noun: DataNoun): string {
   return { m: "der", f: "die", n: "das" }[noun.gender];
+}
+
+function rulesScreen(): string {
+  return `
+    ${header()}
+    <main class="rules">
+      <div class="drill-bar"><span>${t("rules.title")}</span><button class="link" data-action="home">${t("rules.back")}</button></div>
+      ${baselinePages!.rulesList(t)}
+    </main>`;
+}
+
+function ruleScreen(id: string): string {
+  return `
+    ${header()}
+    <main class="rules">
+      <div class="drill-bar"><span></span><button class="link" data-action="rules">${t("rules.backToMap")}</button></div>
+      ${baselinePages!.ruleSentences(id, t)}
+    </main>`;
 }
 
 function doneScreen(result: Extract<Screen, { name: "done" }>): string {
@@ -392,6 +430,10 @@ function render(): void {
         ? doneScreen(screen)
         : screen.name === "menu"
           ? menuScreen(screen.page)
+          : screen.name === "rules"
+            ? rulesScreen()
+            : screen.name === "rule"
+              ? ruleScreen(screen.id)
           : homeScreen();
 
   const first = app.querySelector<HTMLInputElement>("input.blank:not([disabled])");
@@ -487,6 +529,12 @@ app.addEventListener("click", (event) => {
   const value = target?.dataset.value ?? "";
 
   if (action === "articles") startDrill({ kind: "articles" });
+  else if (action === "realDativ") void withBaseline(() => startDrill({ kind: "realDativ" }));
+  else if (action === "rules") void withBaseline(() => show({ name: "rules" }));
+  else if (action === "rule") void withBaseline(() => {
+    show({ name: "rule", id: value });
+    window.scrollTo(0, 0);
+  });
   else if (action === "menu" && value in PAGES) show({ name: "menu", page: value as PageId });
   else if (action === "category" && screen.name === "menu") {
     const page = screen.page;

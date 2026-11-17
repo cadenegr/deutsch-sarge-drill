@@ -20,10 +20,10 @@ export const PREP_CASES = {
   aufgrund: GEN, oberhalb: GEN, unterhalb: GEN, mithilfe: GEN, laut: ["Gen", "Dat"],
 };
 const OLD_SPELLING = { daß: "dass" };
-const MODALS = new Set(["können", "müssen", "dürfen", "sollen", "wollen", "mögen", "möchten"]);
+export const MODALS = new Set(["können", "müssen", "dürfen", "sollen", "wollen", "mögen", "möchten"]);
 // Verbs with "sein" in the Perfekt (gehen → ist gegangen), from Wiktionary:
 // built by scripts/build-sein-verbs.mjs.
-const SEIN_VERBS = new Set(readFileSync(new URL("../sein-verbs.txt", import.meta.url), "utf8").split("\n").filter(Boolean));
+export const SEIN_VERBS = new Set(readFileSync(new URL("../sein-verbs.txt", import.meta.url), "utf8").split("\n").filter(Boolean));
 
 /** Labels and phrases for one analysed sentence ({ text, words, commas, tokens }). */
 export function labelSentence(s) {

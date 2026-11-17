@@ -26,6 +26,10 @@ export interface Exercise {
   accepted?: string[];
   // The answer's color: the noun's gender, or "p" for a plural.
   color?: Gender | "p";
+  // The noun's color, if not its gender: "p" for a plural noun in the sentence.
+  nounColor?: Gender | "p";
+  // A real sentence from Tatoeba: its number, for the credit line.
+  tatoeba?: number;
   explain(t: Translate): string[];
 }
 

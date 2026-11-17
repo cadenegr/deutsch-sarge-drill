@@ -145,6 +145,15 @@ button {
   margin: 0.75rem 0 1rem;
 }
 
+.source {
+  margin: -0.75rem 0 1rem;
+  font-size: 0.75rem;
+}
+
+.source a {
+  color: var(--muted);
+}
+
 .blank {
   width: 6.5rem;
   font: inherit;
@@ -371,4 +380,65 @@ button {
   margin: 0.25rem 0 0;
   color: var(--accent);
   font-size: 0.85rem;
+}
+
+/* Grammar map: the rules and their example sentences */
+.rule-list,
+.sentence-list {
+  margin: 0;
+  padding: 0;
+}
+
+.rule-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.rule-row {
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 0 0.5rem;
+  width: 100%;
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid var(--muted);
+  border-radius: 0.5rem;
+  padding: 0.6rem 0.8rem;
+}
+
+.rule-id {
+  grid-row: span 2;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.rule-meta {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.rule-heading {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 0;
+}
+
+.sentence-list {
+  padding-left: 2.5rem;
+}
+
+.sentence-list li {
+  padding: 0.3rem 0;
+  border-bottom: 1px solid var(--panel);
+}
+
+.sentence-list mark {
+  background: none;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.sentence-list .source {
+  margin-left: 0.4rem;
 }

@@ -10,6 +10,16 @@ export const es: Record<MessageKey, string> = {
   "home.noStats": "Todavía no hay ejercicios. Empieza tu primer drill.",
 
   "drill.articles.title": "Artículos y casos",
+  "drill.real.title": "Frases reales: preposiciones con Dativ",
+  "drill.real.description": "aus, bei, mit, nach, seit, von, zu en frases de Tatoeba",
+  "rules.title": "Mapa gramatical: frases de ejemplo",
+  "rules.description": "Cada regla con sus frases reales de Tatoeba",
+  "rules.intro": "Cada regla del mapa gramatical con las frases que la muestran. Toca una regla para leerlas.",
+  "rules.count": "{count} frases",
+  "rules.back": "Inicio",
+  "rules.backToMap": "← Todas las reglas",
+  "rules.loading": "Cargando frases…",
+  "rules.credit": "Frases de <a href=\"https://tatoeba.org\" target=\"_blank\" rel=\"noopener\">Tatoeba</a> (CC BY 2.0 FR). El número abre la frase allí.",
   "drill.articles.description": "der / den / dem: Nominativ, Akkusativ, Dativ",
 
   "drill.cases.title": "Casos: der, den, dem",
@@ -45,6 +55,7 @@ export const es: Record<MessageKey, string> = {
   "explain.verb": "«{word}» lleva complemento directo → {case}.",
   "explain.preposition": "«{word}» siempre va con {case}.",
   "explain.gender": "{noun} es {gender}: {article} {noun}.",
+  "real.plural": "{noun} está en plural aquí. Plural en Dativ → den, y el sustantivo termina en -n (no si el plural termina en -s).",
   "explain.rule": "{gender} en {case} → {answer}.",
 
   "gender.m": "masculino",

@@ -12,6 +12,16 @@ export const en = {
   "home.noStats": "No exercises yet. Start your first drill.",
 
   "drill.articles.title": "Articles & cases",
+  "drill.real.title": "Real sentences: Dativ prepositions",
+  "drill.real.description": "aus, bei, mit, nach, seit, von, zu in sentences from Tatoeba",
+  "rules.title": "Grammar map: example sentences",
+  "rules.description": "Every rule with its real sentences from Tatoeba",
+  "rules.intro": "Each rule of the grammar map with the sentences that show it. Tap a rule to read them.",
+  "rules.count": "{count} sentences",
+  "rules.back": "Home",
+  "rules.backToMap": "← All rules",
+  "rules.loading": "Loading sentences…",
+  "rules.credit": "Sentences from <a href=\"https://tatoeba.org\" target=\"_blank\" rel=\"noopener\">Tatoeba</a> (CC BY 2.0 FR). The number opens the sentence there.",
   "drill.articles.description": "der / den / dem: Nominativ, Akkusativ, Dativ",
 
   "drill.cases.title": "Cases: der, den, dem",
@@ -47,6 +57,7 @@ export const en = {
   "explain.verb": "“{word}” takes a direct object → {case}.",
   "explain.preposition": "“{word}” always takes {case}.",
   "explain.gender": "{noun} is {gender}: {article} {noun}.",
+  "real.plural": "{noun} is plural here. Plural in Dativ → den, and the noun ends in -n (not when the plural ends in -s).",
   "explain.rule": "{gender} in {case} → {answer}.",
 
   "gender.m": "masculine",
